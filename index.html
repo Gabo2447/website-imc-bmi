@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" class="size-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculador IMC</title>
+    <link rel="stylesheet" href="./dist/styles/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="/src/assets/calculator.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body
+    class="bg-gray-50 text-gray-950 font-display size-full flex flex-col justify-center items-center"
+  >
+    <h1 class="text-blue-900 font-bold text-6xl mb-8">Calculator BMI</h1>
+    <form
+      id="calculator"
+      class="flex flex-col border border-blue-500 px-4 py-2 rounded-lg bg-blue-50/10"
+    >
+      <label for="size" class="text-blue-900">Size:</label>
+      <input
+        required
+        type="text"
+        name="size"
+        id="size"
+        placeholder="1.8m..."
+        class="border border-blue-500 rounded-lg px-2 py-1 focus:bg-blue-600/10 focus:outline-none"
+      />
+      <br />
+
+      <label for="weight" class="text-blue-900">Weight:</label>
+      <input
+        class="border border-blue-500 rounded-lg px-2 py-1 focus:bg-blue-600/10 focus:outline-none"
+        type="text"
+        name="weight"
+        id="weight"
+        required
+        placeholder="79,5kg.."
+      />
+      <br />
+
+      <button
+        type="submit"
+        class="bg-blue-600/30 text-blue-800 border rounded-lg px-8 py-0.5 border-blue-600 transition-all duration-200 ease-in-out hover:scale-110 active:scale-95"
+      >
+        Calcular
+      </button>
+    </form>
+    <div id="result" class="m-10"></div>
+  </body>
+</html>
+
+<script src="./dist/src/index.js"></script>

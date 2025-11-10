@@ -1,0 +1,33 @@
+{
+  "name": "website-imc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "build:ts": "swc src/ -d dist/",
+    "build:css": "pnpx @tailwindcss/cli -i ./src/styles/global.css -o ./dist/styles/styles.css --minify",
+    "build": "pnpm run check-types && pnpm run build:ts && pnpm run build:css",
+    "lint": "oxlint src/",
+    "dev:css": "pnpx @tailwindcss/cli -i ./src/styles/global.css -o ./dist/styles/styles.css --watch",
+    "dev:ts": "swc src/ -d dist/ -w",
+    "dev": "pnpm run dev:css & pnpm run dev:ts &",
+    "start": "pnpm run build"
+  },
+  "keywords": [],
+  "author": "Gabo2447",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.20.0",
+  "dependencies": {
+    "@swc/cli": "^0.7.9",
+    "@swc/core": "^1.15.1",
+    "@tailwindcss/cli": "^4.1.17",
+    "oxlint": "^1.28.0",
+    "oxlint-tsgolint": "^0.5.1",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "chokidar": "^4.0.3"
+  }
+}
